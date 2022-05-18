@@ -14,7 +14,7 @@ module).
     2. Price => Dollars
     3. Release Date => Medium Date
 ● On product details page use of *ngIf for stock units as follows:
-    1. If stock_units > 10 then status should be Available in green text color.
+    1. If stock_units > 10 then status should be Available in green text color
     2. If stock_units <= 10 and stock_units > 3 then status should be Only
      {{stock_units}} left in orange text color.
     3. If stock_units <= 3 then status should be Only {{stock_units}} left in red
