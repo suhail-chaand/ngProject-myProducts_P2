@@ -1,27 +1,22 @@
-# NgProjectMyProductsP2
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Angular Assignment 02
+● You have work inside the same application we created for last assignment.
+● Implement multi-module system(at-least app module, auth module, features
+module).
+● Make use of authguard to authorize the routes.
+● Design 404 page not found screen for wildcard route.
+● Design 401 unauthorized screen for routes rejected by Authgaurd.
+● Make use of services to make an API calls
+● Design login screen which will use data from JSON server for authentication.
+● Login form should have proper validation and error messages.
+● Use of *ngFor to iterate existing production list.
+● Use pipes to convert values into different format
+    1. Name => Capitalize
+    2. Price => Dollars
+    3. Release Date => Medium Date
+● On product details page use of *ngIf for stock units as follows:
+    1. If stock_units > 10 then status should be Available in green text color.
+    2. If stock_units <= 10 and stock_units > 3 then status should be Only
+     {{stock_units}} left in orange text color.
+    3. If stock_units <= 3 then status should be Only {{stock_units}} left in red
+     text color.
+● Use of TemplateRef in your application(Make it by yourself, Optional).
