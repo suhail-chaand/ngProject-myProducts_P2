@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+    <div class="container-fluid">
+        <div>
+            <span id="icon-home"><img src="../../../assets/images/title-icon.png"></span>
+            <span class="navbar-brand">My Products</span>
+        </div>
+        <button class="btn btn-light" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add Product</button>
+    </div>
+</nav>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <app-add-product *ngIf="isAdmin"></app-add-product>
+    <app-err401 *ngIf="!isAdmin"></app-err401>
+</div>

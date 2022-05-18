@@ -1,0 +1,15 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <h4>LOGIN</h4>
+    <div *ngIf="checkResponse" class="invalid-alert">*User not found</div>
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" placeholder="example@email.com">
+        <div *ngIf="email && email.invalid && email.touched" class="invalid-alert">*Invalid E-mail.</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+        <div *ngIf="password && password.invalid && password.touched" class="invalid-alert">*Please select a category.</div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+</form>

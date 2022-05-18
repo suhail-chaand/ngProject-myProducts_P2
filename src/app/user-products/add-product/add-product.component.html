@@ -1,0 +1,69 @@
+<div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Add new product</h5>
+    <button class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" (click)="clear()"></button>
+</div>
+<div class="offcanvas-body">
+    <form [formGroup]="addProductForm" (ngSubmit)="addProduct()">
+        <div class="mb-3">
+            <select class="form-select" formControlName="category">
+                <option value="" hidden selected>Select a category</option>
+                <option value="Mobile Phone">Mobile Phone</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Television">Television</option>
+                <option value="Accessory">Accessory</option>
+            </select>
+            <div *ngIf="category && category.invalid && category.touched" class="invalid-alert">*Please select a category.</div>
+        </div>
+        <div class="d-grid gap-2 d-lg-flex justify-content-md-between">
+            <div class="form-floating mb-3" id="id-input">
+                <input type="text" class="form-control" placeholder="name@example.com" formControlName="id">
+                <label for="floatingInput">Product ID<span style="color:red">*</span></label>
+                <div *ngIf="id && id.invalid && id.touched" class="invalid-alert">*Required field.<br> &nbsp; Special charcters not allowed. </div>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" placeholder="name@example.com" formControlName="model">
+                <label for="floatingInput">Model<span style="color:red">*</span></label>
+                <div *ngIf="model && model.invalid && model.touched" class="invalid-alert">*Required field.<br> &nbsp; Special charcters not allowed.</div>
+            </div>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control form-control-sm" placeholder="name@example.com" formControlName="name">
+            <label for="floatingInput">Name<span style="color:red">*</span></label>
+            <div *ngIf="name && name.invalid && name.touched" class="invalid-alert">*Required field.<br> &nbsp; Special charcters not allowed.<br> &nbsp; Maximum length = 30 characters.</div>
+        </div>
+        <div class="mb-3">
+            <div class="input-group">
+                <span class="input-group-text" style="background-color:white">Release date<span style="color:red">*</span></span>
+                <input type="date" class="form-control" formControlName="release_date" [max]="today">
+            </div>
+            <div *ngIf="release_date && release_date.invalid && release_date.touched" class="invalid-alert">*Required field.</div>
+        </div>
+        <div class="d-grid gap-2 d-lg-flex justify-content-md-between">
+            <div class="mb-3" id="price-input">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" style="background-color:white">Price<span style="color:red">*</span></span>
+                    <span class="input-group-text">&#x20b9;</span>
+                    <input type="number" step="0.50" min=0 class="form-control" formControlName="price">
+                    <div *ngIf="price && price.invalid && price.touched" class="invalid-alert">*Required field.<br> &nbsp; Non-numeric charecters not allowed.</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" style="background-color:white">Stock<span style="color:red">*</span></span>
+                    <input type="number" step="1" min=0 class="form-control" style="text-align:center" formControlName="stock">
+                    <span class="input-group-text">Units</span>
+                    <div *ngIf="stock && stock.invalid && stock.touched" class="invalid-alert">*Required field.<br> &nbsp; Non-numeric characters not allowed.</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Description" style="height: 100px" formControlName="description"></textarea>
+            <label for="floatingTextarea">Description<span style="color:red">*</span></label>
+            <div *ngIf="description && description.invalid && description.touched" class="invalid-alert">*Required field.<br> &nbsp; Maximum length = 150 characters</div>
+        </div><br>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-dark me-md-2" type="submit" [disabled]="addProductForm.invalid">Add Product</button>
+            <button class="btn btn-outline-dark" type="reset">Clear All</button>
+        </div>
+    </form>
+</div>

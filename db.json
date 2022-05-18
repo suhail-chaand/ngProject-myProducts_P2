@@ -1,0 +1,138 @@
+{
+    "products": [{
+            "id": "MP01",
+            "model": "AIP13P",
+            "category": "Mobile Phone",
+            "name": "Apple iPhone 13 Pro",
+            "release_date": "2021-09-01",
+            "price": 139900,
+            "stock": 10,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna augue, porttitor finibus turpis sit amet, varius mattis quam. Nullam."
+        },
+        {
+            "id": "MP02",
+            "model": "SGS22U",
+            "category": "Mobile Phone",
+            "name": "Samsung Galaxy S22 Ultra",
+            "release_date": "2022-02-01",
+            "price": 112999,
+            "stock": 8,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna augue, porttitor finibus turpis sit amet, varius mattis quam. Nullam."
+        },
+        {
+            "id": "MP03",
+            "model": "OP10P",
+            "category": "Mobile Phone",
+            "name": "OnePlus 10 Pro",
+            "release_date": "2022-04-05",
+            "price": 71999,
+            "stock": 12,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna augue, porttitor finibus turpis sit amet, varius mattis quam. Nullam."
+        },
+        {
+            "id": "MP04",
+            "model": "VV21",
+            "category": "Mobile Phone",
+            "name": "Vivo V21",
+            "release_date": "2021-05-01",
+            "price": 30990,
+            "stock": 6,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna augue, porttitor finibus turpis sit amet, varius mattis quam. Nullam."
+        },
+        {
+            "id": "LA01",
+            "model": "MSP7P",
+            "category": "Laptop",
+            "name": "Microsoft Surface Pro 7 +",
+            "release_date": "2019-10-22",
+            "price": 90990,
+            "stock": 4,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna augue, porttitor finibus turpis sit amet, varius mattis quam. Nullam."
+        },
+        {
+            "id": "LA02",
+            "model": "AMBA",
+            "category": "Laptop",
+            "name": "Apple MacBook Air 2020",
+            "release_date": "2020-03-18",
+            "price": 84990,
+            "stock": 2,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna augue, porttitor finibus turpis sit amet, varius mattis quam. Nullam."
+        },
+        {
+            "id": "LA03",
+            "model": "SGB2",
+            "category": "Laptop",
+            "name": "Samsung Galaxy Book2",
+            "release_date": "2022-03-17",
+            "price": 105990,
+            "stock": 6,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna augue, porttitor finibus turpis sit amet, varius mattis quam. Nullam."
+        },
+        {
+            "id": "TV01",
+            "model": "SB4KUHD",
+            "category": "Television",
+            "name": "Sony Bravia 164cm 4K UHD Smart LED TV",
+            "release_date": "2021-09-01",
+            "price": 96990,
+            "stock": 2,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna augue, porttitor finibus turpis sit amet, varius mattis quam. Nullam."
+        },
+        {
+            "id": "TV02",
+            "model": "LG4KUHD",
+            "category": "Television",
+            "name": "LG 165cm 4K UHD Smart OLED TV",
+            "release_date": "2021-10-20",
+            "price": 179999,
+            "stock": 2,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna augue, porttitor finibus turpis sit amet, varius mattis quam. Nullam."
+        },
+        {
+            "id": "AC01",
+            "model": "OPBZ2",
+            "category": "Accessory",
+            "name": "OnePlus Bullets Z2",
+            "release_date": "2022-04-05",
+            "price": 1999,
+            "stock": 14,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna augue, porttitor finibus turpis sit amet, varius mattis quam. Nullam."
+        },
+        {
+            "category": "Laptop",
+            "id": "02",
+            "model": "CBS",
+            "name": "Lenovo",
+            "release_date": "2022-04-12",
+            "price": 59000,
+            "stock": 2,
+            "description": "Laptop description"
+        }
+    ],
+    "users": [{
+            "user_type": "admin",
+            "email": "admin1@mail.com",
+            "name": "Admin-1",
+            "password": "Admin-user1"
+        },
+        {
+            "user_type": "admin",
+            "email": "admin2@mail.com",
+            "name": "Admin-2",
+            "password": "Admin-user2"
+        },
+        {
+            "user_type": "non-admin",
+            "email": "user1@mail.com",
+            "name": "User-1",
+            "password": "Nonadmin-user1"
+        },
+        {
+            "user_type": "non-admin",
+            "email": "user2@mail.com",
+            "name": "User-2",
+            "password": "Nonadmin-user2"
+        }
+    ]
+}

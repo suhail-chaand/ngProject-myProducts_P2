@@ -1,0 +1,21 @@
+#background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../../assets/images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#centre-block {
+    width: 40%;
+    height: fit-content;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    background-color: #310062;
+    border-radius: 20px;
+}
+
+#container {
+    padding: 20px
+}

@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div id="products">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Category</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Stock</th>
+                <th scope="col">View Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.id}}</td>
+                <td>{{product.category}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price | currency}}</td>
+                <td *ngIf="product.stock > 10" style="color:green">{{product.stock}} units available</td>
+                <td *ngIf="product.stock <= 10 && product.stock > 3" style="color:orange">Only {{product.stock}} units left</td>
+                <td *ngIf="product.stock <= 3" style="color:red">Only {{product.stock}} units left</td>
+                <td><button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#productDetails" (click)="fetchDetails(product)">
+                    View Details
+                  </button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="productDetails" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Product Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <app-details [product]="product" *ngIf="isAdmin"></app-details>
+                <app-err401 *ngIf="!isAdmin"></app-err401>
+            </div>
+        </div>
+    </div>
+</div>
