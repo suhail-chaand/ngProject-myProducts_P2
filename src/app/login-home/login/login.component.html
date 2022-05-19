@@ -9,7 +9,7 @@
     <div class="mb-3">
         <label class="form-label">Password</label>
         <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
-        <div *ngIf="password && password.invalid && password.touched" class="invalid-alert">*Password must contain:<br>1. Atleast 8 charachters<br>2. An upper-case and a lower case character, a number and a special character !@#$&_-.</div>
+        <div *ngIf="password && password.invalid && password.touched" class="invalid-alert">*Password must contain:<br>1. Atleast 8 charachters<br>2. An upper-case character<br>3. A lower case character<br>4. A number<br>5. A special character (!@#$&_-)</div>
     </div>
     <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
 </form>
